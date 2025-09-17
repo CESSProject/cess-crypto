@@ -1,0 +1,17 @@
+[package]
+name = "rssdk"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aes-gcm = "=0.10.3"
+curve25519-dalek = "=4.1.3"
+rand = "=0.8.5"
+schnorrkel = "=0.11.5"
+sha2 = "=0.10.9"
+
+# This is anchored to 1.0.220 because serde_bytes v0.11.18 uses serde v1.0.220 abd serde_core v01.0.220. 
+# if not it uses latest serde and serde core and breaks the build
+serde = "=1.0.220" 
+serde_core = "=1.0.220"
+hex = "0.4.3"
